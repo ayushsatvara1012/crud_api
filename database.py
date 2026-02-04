@@ -18,9 +18,12 @@ class Book(Base):
     __tablename__ = 'books'
 
     id = Column(Integer, primary_key=True, index=True)
+    isbn = Column(String, unique=True, index=True)
     title = Column(String, index=True)
     author = Column(String)
     year = Column(Integer)
+    publisher = Column(String)
+    image_url = Column(String)
 
 # -------------------------- Dependency -------------------------- #
 
