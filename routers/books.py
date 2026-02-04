@@ -14,8 +14,9 @@ router = APIRouter(
 
 # -------------------------- Get All Books -------------------------- #
 @router.get('', response_model=List[BookResponse])
-def get_all_books(db: Session = Depends(get_db)):
-    return db.query(Book).all()
+def get_all_books(db: Session = Depends(get_db),skip: int = 0, limit: int = 20):
+    books = db.query(Book).offset(skip).limit(limit).all()
+    return books
 
 # -------------------------- Search Books -------------------------- #
 @router.get('/search/', response_model=List[BookResponse])
