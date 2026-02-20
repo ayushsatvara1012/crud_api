@@ -1,4 +1,4 @@
-# Book Store API
+# Book Store API - LuminaLib (backend code)
 
 ## Project Overview
 The Book Store API is a RESTful service that allows users to manage a collection of books. It provides features for adding, updating, deleting, and retrieving book information through a set of well-defined endpoints.
